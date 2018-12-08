@@ -1,0 +1,11 @@
+# x11.service
+
+[Unit]
+Description=X11 Window System
+After=osjs.service
+
+[Service]
+User=osjs
+Group=osjs
+Restart=on-failure
+ExecStart=/usr/bin/startx

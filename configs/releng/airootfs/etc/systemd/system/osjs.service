@@ -1,0 +1,11 @@
+# osjs.service
+
+[Unit]
+Description=OS.js Server
+After=network.target
+
+[Service]
+User=osjs
+Group=osjs
+Restart=on-failure
+ExecStart=/usr/bin/node /opt/osjs/src/server/index.js

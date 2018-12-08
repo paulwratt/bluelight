@@ -1,0 +1,19 @@
+{
+  "type": "application",
+  "name": "SystemInfo",
+  "category": null,
+  "autostart": true,
+  "singleton": true,
+  "hidden": true,
+  "server": "server.js",
+  "title": {
+    "en_EN": "System Info"
+  },
+  "description": {
+    "en_EN": "System Info"
+  },
+  "files": [
+    "main.js",
+    "main.css"
+  ]
+}
