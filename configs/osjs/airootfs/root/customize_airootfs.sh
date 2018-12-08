@@ -25,4 +25,4 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 systemctl enable pacman-init.service choose-mirror.service osjs.service x11.service
 systemctl set-default multi-user.target
 
-npm install -g electron
+npm install -g electron --unsafe-perm=true --allow-root
