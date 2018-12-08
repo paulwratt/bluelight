@@ -63,8 +63,8 @@ wireless_tools
 wpa_actiond
 wvdial
 xl2tpd
-g++
-xss
+gcc
+nss
 nodejs
 npm
 git
