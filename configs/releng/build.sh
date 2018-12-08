@@ -2,7 +2,7 @@
 
 set -e -u
 
-iso_name=archlinux
+iso_name=osjs
 iso_label="OSJS"
 iso_publisher="OS.js Linux <http://www.os-js.org>"
 iso_application="OS.js Linux Live/Rescue CD"
