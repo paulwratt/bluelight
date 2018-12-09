@@ -4,8 +4,11 @@
 Description=OS.js Server
 After=network.target
 
+[Install]
+WantedBy=multi-user.target
+
 [Service]
 User=osjs
 Group=osjs
 Restart=on-failure
-ExecStart=/usr/bin/node /opt/osjs/src/server/index.js
+ExecStart=/usr/bin/node /opt/os.js/src/server/index.js

@@ -22,7 +22,13 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service osjs.service x11.service
+systemctl enable pacman-init.service choose-mirror.service osjs.service
 systemctl set-default multi-user.target
 
-npm install -g electron --unsafe-perm=true --allow-root
+git clone -b v3 --single-branch https://github.com/SpaceboyRoss01/OS.js.git /opt/os.js
+chown osjs:osjs /opt/os.js -R
+cd /opt/os.js
+sudo npm install --save --unsafe-perm=true --allow-root
+npm run package:discover
+npm run build
+chown osjs:osjs /opt/os.js -R

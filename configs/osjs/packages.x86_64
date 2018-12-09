@@ -63,8 +63,13 @@ wireless_tools
 wpa_actiond
 wvdial
 xl2tpd
-gcc
-nss
 nodejs
 npm
 git
+xorg-xinit
+xorg-server
+xterm
+chromium
+python2
+make
+gcc
