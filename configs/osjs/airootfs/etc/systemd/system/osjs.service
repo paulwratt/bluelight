@@ -8,6 +8,7 @@ After=network.target
 WantedBy=multi-user.target
 
 [Service]
+WorkingDirectory=/opt/os.js
 User=osjs
 Group=osjs
 Restart=on-failure
