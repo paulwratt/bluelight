@@ -4,4 +4,6 @@ if [[ $EUID -ne 0 ]]; then
   SANDBOXING=--no-sandbox
 fi
 
-chromium "http://0.0.0.0:8000" --window-size=1920,1080 --incognito --noerrdialogs --no-first-run --fast --fast-start --disable-infobars --disk-cache-dir=/dev/null $SANBOXING --start-fullscreen --kiosk
+pulseaudio --start
+
+chromium "http://0.0.0.0:8000" --window-size=1920,1080 --window-position=0,0 --incognito --noerrdialogs --no-first-run --fast --fast-start --disable-infobars --disk-cache-dir=/dev/null $SANBOXING --start-fullscreen --kiosk --enable-experimental-extension-apis
