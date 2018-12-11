@@ -12,7 +12,8 @@ cp -aT /etc/skel/ /root/
 chmod 700 /root
 
 groupadd osjs
-useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs
+groupadd networking
+useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G networking,wheel
 useradd demo -p `openssl passwd -1 osjs` -d /home/osjs -g osjs
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
@@ -23,9 +24,10 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service osjs.service sshd.service
+systemctl enable pacman-init.service choose-mirror.service osjs.service sshd.service NetworkManager.service
 systemctl set-default multi-user.target
 
+chown root:root /etc/sudoers
 git clone -b v3 --single-branch https://github.com/SpaceboyRoss01/OS.js.git /opt/os.js
 chown osjs:osjs /opt/os.js -R
 cd /opt/os.js

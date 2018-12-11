@@ -68,8 +68,13 @@ npm
 git
 xorg-xinit
 xorg-server
-xterm
+xorg-xdpyinfo
 chromium
 python2
 make
 gcc
+pulseaudio
+pulseaudio-alsa
+openssh
+networkmanager
+autofs
