@@ -12,8 +12,7 @@ cp -aT /etc/skel/ /root/
 chmod 700 /root
 
 groupadd osjs
-groupadd networking
-useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G networking,wheel
+useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G network,wheel,users,power
 useradd demo -p `openssl passwd -1 osjs` -d /home/osjs -g osjs
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
@@ -24,7 +23,7 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service osjs.service sshd.service NetworkManager.service
+systemctl enable pacman-init.service choose-mirror.service osjs.service sshd.service NetworkManager.service autofs.service
 systemctl set-default multi-user.target
 
 chown root:root /etc/sudoers
