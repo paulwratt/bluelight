@@ -4,6 +4,13 @@ if [[ $EUID -ne 0 ]]; then
   SANDBOXING=--no-sandbox
 fi
 
-pulseaudio --start
+cd /opt/os.js && npm run serve & 
+
+start-pulseaudio-x11
+
+for SINK in `pactl list-sinks | grep 'index:' | cut -b12-`
+do
+  pactl set-sink-volume $SINK 100%
+done
 
 chromium "http://0.0.0.0:8000" --window-size=`xdpyinfo | awk '/dimensions:/ { print $2; exit }' | sed 's/x/,/'` --window-position=0,0 --incognito --noerrdialogs --no-first-run --fast --fast-start --disable-infobars --disk-cache-dir=/dev/null $SANBOXING --start-fullscreen --kiosk --enable-experimental-extension-apis

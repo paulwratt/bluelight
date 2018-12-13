@@ -69,6 +69,7 @@ git
 xorg-xinit
 xorg-server
 xorg-xdpyinfo
+xorg-xprop
 chromium
 python2
 make

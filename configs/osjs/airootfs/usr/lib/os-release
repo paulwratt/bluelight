@@ -1,5 +1,7 @@
 NAME="OS.js Linux"
 PRETTY_NAME="OS.js Linux"
+VERSION="0.1.4-prealpha"
+VERSION_CODENAME=prealpha
 ID=osjs
 ID_LIKE=archlinux
 ANSI_COLOR="0;35"

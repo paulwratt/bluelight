@@ -23,7 +23,7 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service osjs.service sshd.service NetworkManager.service autofs.service
+systemctl enable pacman-init.service choose-mirror.service sshd.service NetworkManager.service autofs.service
 systemctl set-default multi-user.target
 
 chown root:root /etc/sudoers
