@@ -4,7 +4,8 @@ if [[ $EUID -ne 0 ]]; then
   SANDBOXING=--no-sandbox
 fi
 
-cd /opt/os.js && npm run serve & 
+cd /opt/os.js && npm run serve &
+sleep 5
 
 start-pulseaudio-x11
 

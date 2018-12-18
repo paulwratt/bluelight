@@ -1,6 +1,6 @@
 NAME="OS.js Linux"
 PRETTY_NAME="OS.js Linux"
-VERSION="0.1.4-prealpha"
+VERSION="0.1.5-prealpha"
 VERSION_CODENAME=prealpha
 ID=osjs
 ID_LIKE=archlinux
