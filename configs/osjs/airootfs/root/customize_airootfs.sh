@@ -27,7 +27,7 @@ systemctl enable pacman-init.service choose-mirror.service sshd.service NetworkM
 systemctl set-default multi-user.target
 
 chown root:root /etc/sudoers
-git clone -b v3 --single-branch https://github.com/SpaceboyRoss01/OS.js.git /opt/os.js
+git clone -b v3 --single-branch https://github.com/OSjs-Linux/OS.js.git /opt/os.js
 chown osjs:osjs /opt/os.js -R
 cd /opt/os.js
 sudo npm install --save --unsafe-perm=true --allow-root
