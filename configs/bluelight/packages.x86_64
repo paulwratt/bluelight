@@ -80,3 +80,4 @@ openssh
 networkmanager
 autofs
 sox
+jq
