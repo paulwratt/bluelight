@@ -1,10 +1,10 @@
 NAME="BlueLight"
 PRETTY_NAME="BlueLight"
-VERSION="0.1.5-prealpha"
+VERSION="0.1.6-prealpha"
 VERSION_CODENAME=prealpha
-ID=osjs
+ID=bluelight
 ID_LIKE=archlinux
-ANSI_COLOR="0;35"
+ANSI_COLOR="0;96"
 HOME_URL="https://bluelightos.github.io"
 SUPPORT_URL="https://community.os-js.org/"
 BUG_REPORT_URL="https://github.com/BlueLightOS/bluelight/issues"
