@@ -70,7 +70,7 @@ xorg-xinit
 xorg-server
 xorg-xdpyinfo
 xorg-xprop
-chromium
+electron
 python2
 make
 gcc
@@ -81,3 +81,4 @@ networkmanager
 autofs
 sox
 jq
+ttf-dejavu
