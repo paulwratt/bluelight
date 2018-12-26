@@ -11,9 +11,15 @@ mkfs.ext4 -F ${LOOP}p2
 mount ${LOOP}p2 rootfs
 mkdir rootfs/boot
 mount ${LOOP}p1 rootfs/boot
-wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
-tar -xpf "ArchLinuxARM-rpi-2-latest.tar.gz" -C mnt
-rm "ArchLinuxARM-rpi-2-latest.tar.gz"
+if [ $REV -eq 2 ]; then
+  wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
+  tar -xpf "ArchLinuxARM-rpi-2-latest.tar.gz" -C mnt
+  rm "ArchLinuxARM-rpi-2-latest.tar.gz"
+else;
+  wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-1-latest.tar.gz
+  tar -xpf "ArchLinuxARM-rpi-1-latest.tar.gz" -C mnt
+  rm "ArchLinuxARM-rpi-1-latest.tar.gz"
+fi;
 cp /etc/resolv.conf rootfs/etc/resolv.conf
 cp /usr/bin/qemu-arm-static rootfs/usr/bin/
 mount -t proc none rootfs/proc

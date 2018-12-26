@@ -1,1 +1,3 @@
 VERSION=0.1.0-prealpha
+TARGET=pi
+REV=2
