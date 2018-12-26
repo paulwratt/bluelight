@@ -19,4 +19,8 @@ wget -O /etc/systemd/system/pacman-init.service https://raw.githubusercontent.co
 wget -O /etc/systemd/system/choose-mirror.service https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/etc/systemd/system/choose-mirror.service
 wget -O /etc/systemd/system/getty@tty1.service.d/autologin.conf https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
 wget -O /etc/polkit-1/rules.d/50-org.freedesktop.NetworkManager.rules https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/etc/polkit-1/rules.d/50-org.freedesktop.NetworkManager.rules
+mkdir /etc/skel
+touch /etc/skel/.Xauthority
+wget -O /etc/skel/.bash_profile https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/etc/skel/.bash_profile
+wget -O /etc/skel/.zprofile https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/etc/skel/.zprofile
 curl -o- https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/root/customize_airootfs.sh | sudo bash
