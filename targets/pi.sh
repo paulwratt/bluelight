@@ -25,7 +25,7 @@ cp /usr/bin/qemu-arm-static rootfs/usr/bin/
 mount -t proc none rootfs/proc
 mount -t sysfs none rotfs/sys
 mount -o bind /dev rootfs/dev
-cat chroot.sh | chroot rootfs
+cat helpers/chroot.sh | chroot rootfs
 umount rootfs/proc
 umount rootfs/sys
 umount rootfs/dev
