@@ -1,8 +1,8 @@
 source config.sh
 mkdir out
 mkdir rootfs
-fallocate -l 2G "out/bluelight-$VERSION.img"
-LOOP=$(sudo losetup --find --show "out/bluelight-$VERSION.img")
+fallocate -l 2G "out/bluelight-$VERSION-pi.img"
+LOOP=$(sudo losetup --find --show "out/bluelight-$VERSION-pi.img")
 parted --script $LOOP mklabel msdos
 parted --script $LOOP mkpart primary fat32 0% 100M
 parted --script $LOOP mkpart primary ext4 100M 100%
