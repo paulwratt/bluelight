@@ -1,7 +1,8 @@
+source config.sh
 mkdir out
 mkdir rootfs
-fallocate -l 2G "out/pi.img"
-LOOP=$(sudo losetup --find --show "out/pi.img")
+fallocate -l 2G "out/bluelight-$VERSION.img"
+LOOP=$(sudo losetup --find --show "out/bluelight-$VERSION.img")
 parted --script $LOOP mklabel msdos
 parted --script $LOOP mkpart primary fat32 0% 100M
 parted --script $LOOP mkpart primary ext4 100M 100%
@@ -12,6 +13,7 @@ mkdir rootfs/boot
 mount ${LOOP}p1 rootfs/boot
 wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
 tar -xpf "ArchLinuxARM-rpi-2-latest.tar.gz" -C mnt
+rm "ArchLinuxARM-rpi-2-latest.tar.gz"
 cp /etc/resolv.conf rootfs/etc/resolv.conf
 cp /usr/bin/qemu-arm-static rootfs/usr/bin/
 mount -t proc none rootfs/proc
