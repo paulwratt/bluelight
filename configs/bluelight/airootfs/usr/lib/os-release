@@ -1,6 +1,6 @@
 NAME="BlueLight"
 PRETTY_NAME="BlueLight"
-VERSION="0.1.6-prealpha"
+VERSION="0.1.7-prealpha"
 VERSION_CODENAME=prealpha
 ID=bluelight
 ID_LIKE=archlinux

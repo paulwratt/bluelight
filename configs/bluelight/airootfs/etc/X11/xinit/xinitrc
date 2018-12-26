@@ -4,6 +4,8 @@ if [[ $EUID -ne 0 ]]; then
   SANDBOXING=--no-sandbox
 fi
 
+setxkbmap -option srvrkeys:none
+
 start-pulseaudio-x11
 
 for SINK in `pactl list-sinks | grep 'index:' | cut -b12-`
