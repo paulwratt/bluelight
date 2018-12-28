@@ -8,7 +8,6 @@ pacman-key --init
 pacman-key --populate archlinuxarm
 pacman -Syu --noconfirm
 pacman -S --noconfirm git nodejs npm git xorg-xinit xorg-server xorg-xdpyinfo xorg-xprop python2 make gcc pulseaudio pulseaudio-alsa openssh networkmanager autofs sudo mtools zsh jq ttf-dejavu sox wget ca-certificates ca-certificates-utils
-ln -sf /etc/ca-certificates/extracted/ca-bundle.trust.crt /etc/ssl/certs/ca-certificates.crt
 update-ca-trust
 npm install -g electron
 wget -O /usr/lib/os-release https://raw.githubusercontent.com/BlueLightOS/bluelight/master/configs/bluelight/airootfs/usr/lib/os-release
