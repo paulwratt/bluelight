@@ -35,7 +35,7 @@ cd /home/osjs
 git clone https://aur.archlinux.org/plymouth.git
 chown root:root /etc/sudoers
 chown osjs:users -R /home/osjs/plymouth
-su -c "cd /home/osjs/plymouth && yes osjs | makepkg -si --noconfirm" osjs
+su -c "cd /home/osjs/plymouth && makepkg -si --noconfirm" osjs
 rm -rf /home/osjs/plymouth
 
 curl https://raw.githubusercontent.com/BlueLightOS/bluelight/master/images/logo-transparent.png > /usr/share/plymouth/arch-logo.png
