@@ -14,7 +14,7 @@ cp -aT /etc/skel/ /home/osjs/
 chmod 700 /root
 
 groupadd osjs
-useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G network,wheel,users,power
+useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G network,wheel,users,power,input
 useradd demo -p `openssl passwd -1 osjs` -d /home/demo -g osjs
 
 chown demo:osjs -R /home/demo
@@ -41,10 +41,11 @@ cd /
 
 curl https://raw.githubusercontent.com/BlueLightOS/bluelight/master/images/logo-transparent.png > /usr/share/plymouth/arch-logo.png
 
-sed -i '4d' /etc/sudoers
+sed -i '2d' /etc/sudoers
 chown root:root /etc/sudoers
 
-git clone -b v3 --single-branch https://github.com/BlueLightOS/OS.js.git /opt/os.js
+cd /opt/
+git clone -b v3 --single-branch https://github.com/BlueLightOS/OS.js.git os.js
 chown osjs:osjs /opt/os.js -R
 cd /opt/os.js
 sudo npm install --save --unsafe-perm=true --allow-root

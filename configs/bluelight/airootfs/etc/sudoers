@@ -1,11 +1,3 @@
-# Allow the OS.js group to use sudo
 %osjs ALL=(ALL) ALL
-
 osjs ALL=(ALL) NOPASSWD: ALL
-
-# Of course root needs sudo access
 root ALL=(ALL) ALL
-
-## Read drop-in files from /etc/sudoers.d
-## (the '#' here does not indicate a comment)
-#includedir /etc/sudoers.d
