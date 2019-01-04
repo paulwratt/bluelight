@@ -37,6 +37,7 @@ chown root:root /etc/sudoers
 chown osjs:users -R /home/osjs/plymouth
 su -c "cd /home/osjs/plymouth && makepkg -si --noconfirm" osjs
 rm -rf /home/osjs/plymouth
+cd /
 
 curl https://raw.githubusercontent.com/BlueLightOS/bluelight/master/images/logo-transparent.png > /usr/share/plymouth/arch-logo.png
 
