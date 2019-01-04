@@ -1,8 +1,6 @@
 #!/bin/sh
 
-if [[ $EUID -ne 0 ]]; then
-  SANDBOXING=--no-sandbox
-fi
+setxkbmap -option srvrkeys:none
 
 start-pulseaudio-x11
 
@@ -12,7 +10,6 @@ do
 done
 
 cd /opt/os.js && npm run serve >> /tmp/osjs.log &
-#setxkbmap -option srvrkeys:none
 
 while ! nc -z localhost 8000; do   
   sleep 0.1

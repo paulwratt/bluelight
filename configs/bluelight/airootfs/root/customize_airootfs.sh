@@ -10,6 +10,7 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 cp -aT /etc/skel/ /home/demo/
+cp -aT /etc/skel/ /home/osjs/
 chmod 700 /root
 
 groupadd osjs
@@ -17,6 +18,7 @@ useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G network,wheel,
 useradd demo -p `openssl passwd -1 osjs` -d /home/demo -g osjs
 
 chown demo:osjs -R /home/demo
+chown osjs:osjs -R /home/demo
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
