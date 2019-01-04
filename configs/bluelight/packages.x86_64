@@ -70,7 +70,7 @@ xorg-xinit
 xorg-server
 xorg-xdpyinfo
 xorg-xprop
-electron
+electron2
 python2
 make
 gcc
@@ -82,3 +82,8 @@ autofs
 sox
 jq
 ttf-dejavu
+libdrm
+pango
+docbook-xsl
+base-devel
+netcat

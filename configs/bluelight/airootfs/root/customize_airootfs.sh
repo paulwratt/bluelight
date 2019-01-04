@@ -29,7 +29,18 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 systemctl enable pacman-init.service choose-mirror.service sshd.service NetworkManager.service autofs.service
 systemctl set-default multi-user.target
 
+cd /root
+git clone https://aur.archlinux.org/plymouth.git
 chown root:root /etc/sudoers
+chown osjs:users -R /root/plymouth
+su -c "cd /root/plymouth && yes osjs | makepkg -si --noconfirm" osjs
+rm -rf /root/plymouth
+
+curl https://raw.githubusercontent.com/BlueLightOS/bluelight/master/images/logo-transparent.png > /usr/share/plymouth/arch-logo.png
+
+sed -i '4d' /etc/sudoers
+chown root:root /etc/sudoers
+
 git clone -b v3 --single-branch https://github.com/BlueLightOS/OS.js.git /opt/os.js
 chown osjs:osjs /opt/os.js -R
 cd /opt/os.js
