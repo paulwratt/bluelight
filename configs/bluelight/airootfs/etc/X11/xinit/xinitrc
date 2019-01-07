@@ -1,13 +1,19 @@
 #!/bin/sh
 
-setxkbmap -option srvrkeys:none
-
 start-pulseaudio-x11
 
 for SINK in `pactl list-sinks | grep 'index:' | cut -b12-`
 do
   pactl set-sink-volume $SINK 100%
 done
+
+if [ $(cat /etc/bluelight.json | jq -r ".VTSwitching") = "false" ]; then
+    setxkbmap -option srvrkeys:none
+fi
+
+if [ $(cat /etc/bluelight.json | jq -r ".OSjsAutoUpdate") = "true" ]; then
+    cd /opt/os.js && npm update && npm run package:discover && npm run build
+fi
 
 cd /opt/os.js && npm run serve >> /tmp/osjs.log &
 
