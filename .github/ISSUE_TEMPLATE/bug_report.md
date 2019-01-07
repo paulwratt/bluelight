@@ -12,7 +12,7 @@ Not using this template will result in an issue closure. Don't forgot to attach 
 --->
 
 **Details**
-- Virtual Machine: [ ] **Replace with the virtualization software you use including the version**
+- [] Virtual Machine: **Replace with the virtualization software you use including the version**
 - Motherboard: **Replace with the motherboard**
 - BIOS Ver: **Replace with your BIOS version**
 - CPU: **Replace with the CPU**
