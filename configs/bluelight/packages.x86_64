@@ -87,3 +87,5 @@ pango
 docbook-xsl
 base-devel
 netcat
+bluez
+bluez-utils
