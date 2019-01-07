@@ -7,6 +7,18 @@ assignees: ''
 
 ---
 
+<!---
+Not using this template will result in an issue closure. Don't forgot to attach any log files if the bug comes from the installer, the log file is stored in home://install.log.
+--->
+
+**Details**
+- Virtual Machine: [ ] **Replace with the virtualization software you use including the version**
+- Motherboard: **Replace with the motherboard**
+- BIOS Ver: **Replace with your BIOS version**
+- CPU: **Replace with the CPU**
+- Disk (**/dev/sda**): **Replace with disk space**
+- OS Version: **Replace with the version of BlueLight that you used**
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
