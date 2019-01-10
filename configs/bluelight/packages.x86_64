@@ -79,7 +79,6 @@ pulseaudio-alsa
 openssh
 networkmanager
 autofs
-sox
 jq
 ttf-dejavu
 libdrm
@@ -89,3 +88,4 @@ base-devel
 netcat
 bluez
 bluez-utils
+neofetch
