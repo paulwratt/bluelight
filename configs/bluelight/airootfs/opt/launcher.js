@@ -2,8 +2,8 @@ const { app, BrowserWindow } = require('electron');
 
 const calcSize = () => {
   const {screen} = require('electron');
-  let width = 0;
-  let height = 0;
+  let width = 1;
+  let height = 1;
   for(let disp of screen.getAllDisplays()) {
     width += disp.size.width;
     if(height < disp.size.height) height = disp.size.height;
@@ -41,13 +41,13 @@ app.on('ready',() => {
   screen.on('display-added',() => {
     if(win != null) {
       let size = calcSize();
-      win.resize(size.width,size.height);
+      win.setSize(size.width,size.height);
     }
   });
   screen.on('display-removed',() => {
     if(win != null) {
       let size = calcSize();
-      win.resize(size.width,size.height);
+      win.setSize(size.width,size.height);
     }
   });
   createWindow();
