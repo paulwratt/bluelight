@@ -1,4 +1,5 @@
 {
 	"VTSwitching": false,
-	"OSjsAutoUpdate": false
+	"OSjsAutoUpdate": false,
+	"SendStatistics": false
 }
