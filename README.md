@@ -1,5 +1,7 @@
 # BlueLight
 
+[![Discord](https://img.shields.io/discord/524748448357023745.svg?style=for-the-badge)](https://discord.gg/ABey2Xc)
+
 BlueLight, formerly called OS.js Linux, is a lightweight web-based Linux distro powered by OS.js. It uses the power of Electron to run a web-based desktop environment, OS.js, to provide the user with a more web-based experience.
 
 ## Credits
@@ -8,7 +10,6 @@ BlueLight, formerly called OS.js Linux, is a lightweight web-based Linux distro 
 
 ## Links
 * [Blog](/blog)
-* [Discord Server Invite](https://discord.gg/ABey2Xc)
 * [Downloads](/downloads)
 * [Gitter Invite](https://gitter.im/TheBlueLightOS/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 * [Members](/members)
