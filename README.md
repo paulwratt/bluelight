@@ -1,7 +1,9 @@
 # BlueLight
 
+[![Release](https://badgen.net/github/release/BlueLightOS/bluelight)](https://github.com/BlueLightOS/bluelight/releases)
 [![Discord](https://img.shields.io/discord/524748448357023745.svg?style=for-the-badge)](https://discord.gg/ABey2Xc)
-[![Gitter](https://img.shields.io/gitter/room/TheBlueLightOS/community.svg?style=for-the-badge)](https://gitter.im/TheBlueLightOS/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Gitter](https://badgen.net/badge/chat/on%20gitter/cyan)](https://gitter.im/TheBlueLightOS/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+![Supports](https://badgen.net/badge/platform/amd64?list=1)
 
 BlueLight, formerly called OS.js Linux, is a lightweight web-based Linux distro powered by OS.js. It uses the power of Electron to run a web-based desktop environment, OS.js, to provide the user with a more web-based experience.
 
