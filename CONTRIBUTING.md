@@ -1,6 +1,6 @@
 # Contributing
 
-This file aims to provide users with a basic understanding of how to contribute to BlueLight. This applies to all repositories for BlueLight.
+This document aims to provide users with a basic understanding of how to contribute to BlueLight. This applies to all repositories for BlueLight. Not following this document will result in ignoring your contributions.
 
 ## Commit Message Format
 
