@@ -31,25 +31,7 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 systemctl enable pacman-init.service choose-mirror.service sshd.service NetworkManager.service autofs.service bluetooth.service
 systemctl set-default multi-user.target
 
-cd /home/osjs
-git clone https://aur.archlinux.org/plymouth.git
-chown root:root /etc/sudoers
-chown osjs:users -R /home/osjs/plymouth
-su -c "cd /home/osjs/plymouth && makepkg -si --noconfirm" osjs
-rm -rf /home/osjs/plymouth
-cd /
-
-curl https://raw.githubusercontent.com/BlueLightOS/bluelight/master/images/logo-transparent.png > /usr/share/plymouth/arch-logo.png
-
 sed -i '2d' /etc/sudoers
 chown root:root /etc/sudoers
 
-cd /opt/
-git clone -b v3 --single-branch https://github.com/BlueLightOS/OS.js.git os.js
-chown osjs:osjs /opt/os.js -R
-cd /opt/os.js
-sudo npm install --save --unsafe-perm=true --allow-root
-chown osjs:osjs /opt/os.js -R
-su -c "npm run package:discover"
-npm run build
 chown osjs:osjs /opt/os.js -R
