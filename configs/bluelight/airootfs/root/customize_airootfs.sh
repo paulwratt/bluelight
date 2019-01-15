@@ -34,6 +34,4 @@ systemctl set-default multi-user.target
 sed -i '2d' /etc/sudoers
 chown root:root /etc/sudoers
 
-rm -rf /opt/os.js/dist/
-cd /opt/os.js && npm run build && npm run package:discover
 chown osjs:osjs /opt/os.js -R
