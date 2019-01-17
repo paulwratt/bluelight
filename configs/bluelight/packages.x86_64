@@ -72,3 +72,5 @@ plymouth
 osjs-xterm-application
 osjs-syscfg-application
 osjs-standard-theme
+osjs-freedesktop-sounds
+osjs-gnome-icons
