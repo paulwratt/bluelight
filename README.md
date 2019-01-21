@@ -6,6 +6,7 @@
 ![Supports](https://badgen.net/badge/platform/amd64?list=1)
 [![Commits](https://badgen.net/github/last-commit/BlueLightOS/bluelight)](https://github.com/BlueLightOS/bluelight/commits/master)
 [![Contributors](https://badgen.net/opencollective/contributors/bluelight-maintainers)](https://opencollective.com/bluelight-maintainers)
+[![Patreon](https://badgen.net/badge/become/a%20patron/F96854)](https://www.patreon.com/BlueLightOS)
 
 BlueLight, formerly called OS.js Linux, is a lightweight web-based Linux distro powered by OS.js. It uses the power of Electron to run a web-based desktop environment, OS.js, to provide the user with a more web-based experience.
 
