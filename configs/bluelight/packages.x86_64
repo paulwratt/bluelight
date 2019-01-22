@@ -68,6 +68,7 @@ bluelight-base
 bluelight-client
 bluelight-installer-application
 bluelight-settings-application
+bluelight-procviewer-application
 plymouth
 osjs-xterm-application
 osjs-syscfg-application
