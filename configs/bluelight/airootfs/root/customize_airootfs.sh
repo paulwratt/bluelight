@@ -17,8 +17,8 @@ groupadd bluelight
 useradd bluelight -p `openssl passwd -1 bluelight` -d /home/osjs -g bluelight -G network,wheel,users,power,input
 useradd demo -p `openssl passwd -1 bluelight` -d /home/demo -g bluelight
 
-chown demo:osjs -R /home/demo
-chown bluelight:osjs -R /home/bluelight
+chown demo:bluelight -R /home/demo
+chown bluelight:bluelight -R /home/bluelight
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
