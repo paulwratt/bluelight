@@ -36,13 +36,13 @@
 module.exports = {
   public: '/',
   login: {
-    username: 'osjs',
-    password: 'osjs'
+    username: 'bluelight',
+    password: 'bluelight'
   },
   auth: {
     login: {
-      username: 'osjs',
-      password: 'osjs'
+      username: 'bluelight',
+      password: 'bluelight'
     }
   },
   webbrowser: {
