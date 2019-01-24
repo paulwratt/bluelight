@@ -10,7 +10,7 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 cp -aT /etc/skel/ /home/demo/
-cp -aT /etc/skel/ /home/osjs/
+cp -aT /etc/skel/ /home/bluelight/
 chmod 700 /root
 
 groupadd bluelight
@@ -18,7 +18,7 @@ useradd bluelight -p `openssl passwd -1 bluelight` -d /home/osjs -g bluelight -G
 useradd demo -p `openssl passwd -1 bluelight` -d /home/demo -g bluelight
 
 chown demo:osjs -R /home/demo
-chown osjs:osjs -R /home/demo
+chown bluelight:osjs -R /home/bluelight
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
@@ -35,4 +35,4 @@ sed -i '2d' /etc/sudoers
 chown root:root /etc/sudoers
 
 cd /opt/os.js && npm run build
-chown osjs:osjs /opt/os.js -R
+chown bluelight:bluelight /opt/os.js -R
