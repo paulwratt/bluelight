@@ -13,9 +13,9 @@ cp -aT /etc/skel/ /home/demo/
 cp -aT /etc/skel/ /home/osjs/
 chmod 700 /root
 
-groupadd osjs
-useradd osjs -p `openssl passwd -1 osjs` -d /home/osjs -g osjs -G network,wheel,users,power,input
-useradd demo -p `openssl passwd -1 osjs` -d /home/demo -g osjs
+groupadd bluelight
+useradd bluelight -p `openssl passwd -1 bluelight` -d /home/osjs -g bluelight -G network,wheel,users,power,input
+useradd demo -p `openssl passwd -1 bluelight` -d /home/demo -g bluelight
 
 chown demo:osjs -R /home/demo
 chown osjs:osjs -R /home/demo
