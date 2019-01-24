@@ -48,19 +48,6 @@ module.exports = {
   webbrowser: {
     homepage: 'https://bluelightos.github.io'
   },
-  desktop: {
-    settings: {
-      panels: [{
-        position: 'top',
-        items: [
-          {name: 'menu',options: {boundKey: 'Meta'}},
-          {name: 'windows'},
-          {name: 'tray'},
-          {name: 'clock'}
-        ]
-      }]
-    }
-  },
   vfs: {
     mountpoints: [{
       name: 'devs',
