@@ -28,7 +28,7 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service sshd.service NetworkManager.service autofs.service bluetooth.service xorg.service
+systemctl enable pacman-init.service choose-mirror.service sshd.service NetworkManager.service autofs.service bluetooth.service xorg.service bluelight.service
 systemctl set-default multi-user.target
 
 sed -i '2d' /etc/sudoers

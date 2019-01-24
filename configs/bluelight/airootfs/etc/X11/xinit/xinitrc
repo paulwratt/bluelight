@@ -2,11 +2,6 @@
 
 start-pulseaudio-x11
 
-for SINK in `pactl list-sinks | grep 'index:' | cut -b12-`
-do
-  pactl set-sink-volume $SINK 100%
-done
-
 if [ $(cat /etc/bluelight.json | jq -r ".VTSwitching") = "false" ]; then
     setxkbmap -option srvrkeys:none
 fi
