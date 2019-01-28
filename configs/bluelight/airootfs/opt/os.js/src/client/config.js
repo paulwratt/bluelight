@@ -50,6 +50,7 @@ module.exports = {
   },
   desktop: {
     settings: {
+      theme: 'AlphaTheme',
       panels: [{
         position: 'top',
         items: [
@@ -58,7 +59,12 @@ module.exports = {
           {name: 'tray'},
           {name: 'clock'}
         ]
-      }]
+      }],
+      background: {
+        src: require('./wallpaper.png'),
+        color: '#BBDEFB',
+        style: 'cover'
+      }
     }
   },
   vfs: {
