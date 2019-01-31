@@ -14,7 +14,7 @@ cp -aT /etc/skel/ /home/bluelight/
 chmod 700 /root
 
 groupadd bluelight
-useradd bluelight -p `openssl passwd -1 bluelight` -d /home/osjs -g bluelight -G network,wheel,users,power,input
+useradd bluelight -p `openssl passwd -1 bluelight` -d /home/bluelight -g bluelight -G network,wheel,users,power,input
 useradd demo -p `openssl passwd -1 bluelight` -d /home/demo -g bluelight
 
 chown demo:bluelight -R /home/demo
